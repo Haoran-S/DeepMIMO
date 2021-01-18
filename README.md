@@ -14,6 +14,6 @@ To generate the dataset, please follow these steps:
 
 Step 1: Download source data 'O1_60' under ‘O1’ Ray-Tracing Scenario from https://www.deepmimo.net/ray_tracing.html
 
-Step 2: Run Matlab file generate_data_part1.m to generate To generate the DeepMIMO dataset based on this ray-tracing scenario
+Step 2: Run Matlab file generate_data_part1.m to generate wireless channels based on DeepMIMO ray-tracing scenario
 
-Step 3: Run Python file python3 generate_data_part2.py to generate labels labeld by WMMSE algorithm
+Step 3: Run Python file python3 generate_data_part2.py to generate labels labeled by WMMSE algorithm
