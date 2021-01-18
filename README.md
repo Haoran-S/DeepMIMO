@@ -1,8 +1,6 @@
 ## DeepMIMO for Power Allocation
 
-This is a MATLAB / Python code package modified from DeepMIMO to generate real channels for power allocation. The code is based on the publicly available DeepMIMO dataset published for deep learning applications in mmWave and massive MIMO systems. 
-
-This MATLAB / Python code package is related to the following article:
+This is a MATLAB / Python code package modified from DeepMIMO (https://www.deepmimo.net) to generate real channels for power allocation. This code package is related to the following article:
 
 [1] Haoran Sun, Wenqiang Pu, Minghe Zhu,  Xiao Fu, Tsung-Hui Chang, and Mingyi Hong, "Learning to Continuously Optimize Wireless Resource In Episodically Dynamic Environment." arXiv preprint arXiv:2011.07782 (2020).
  
@@ -11,7 +9,6 @@ This MATLAB / Python code package is related to the following article:
 [3] Haoran Sun, Xiangyi Chen, Qingjiang Shi, Mingyi Hong, Xiao Fu and Nikos D. Sidiropoulos, “Learning to Optimize: Training Deep Neural Networks for Wireless Resource Management”, IEEE Transactions on Signal Processing 66.20 (2018): 5438-5453. 
  
  
-
 ## Dataset Generation
 To generate the dataset, please follow these steps:
 
