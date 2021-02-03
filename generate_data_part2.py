@@ -6,10 +6,10 @@ import torch
 import h5py
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--o', default='dataset_deepmimo12.pt', help='output file')
+parser.add_argument('--o', default='dataset_deepmimo.pt', help='output file')
 parser.add_argument('--num_tasks', default=3, type=int, help='number of tasks')
 parser.add_argument('--noise', default=1e-12, type=float)
-parser.add_argument('--num_train', default='20000-20000-20000-20000-20000', type=str)
+parser.add_argument('--num_train', default='20000-20000-20000', type=str)
 args = parser.parse_args()
 
 tasks_tr = []
@@ -27,7 +27,6 @@ for t in range(args.num_tasks):
     num_samples = channel_set.shape[0]
     num_bs = channel_set.shape[1]
     num_user = channel_set.shape[2]
-    print(channel_set[0])
         
     # compute WMMSE labels
     Pmax = 1
@@ -36,12 +35,8 @@ for t in range(args.num_tasks):
     for loop in range(num_samples):
         H = np.reshape(channel_set[loop], (num_user, num_user))
         Y[loop, :] = WMMSE_sum_rate(Pini, H, Pmax, args.noise)
-#    label_set = channel_set_file['Y']
     label_set = Y
     channel_set = channel_set.reshape(num_samples, num_bs*num_user)
-    print(np.around(Y[0:10], 2), args.noise)
-    
-    
 
     # Parameter initialization
     num_train = int(num_samples -1000)

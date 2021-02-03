@@ -15,8 +15,9 @@ This MATLAB / Python code package is related to the following article:
 ## Dataset Generation
 To generate the dataset, please follow these steps:
 
-Step 1: Download source data 'O1_60' under ‘O1’ Ray-Tracing Scenario from https://www.deepmimo.net/ray_tracing.html
+Step 1: Download source data 'O1_60' under ‘O1’ Ray-Tracing Scenario from https://www.deepmimo.net/ray_tracing.html then put it into the folder: Data_Generation/RayTracing Scenarios/O1
 
 Step 2: Run Matlab file generate_data_part1.m to generate To generate the DeepMIMO dataset based on this ray-tracing scenario
 
 Step 3: Run Python file python3 generate_data_part2.py to generate labels labeld by WMMSE algorithm
+python3 generate_data_part2.py --o dataset_deepmimo_fastx3.pt --num_tasks 3 --num_train 20000-20000-20000
